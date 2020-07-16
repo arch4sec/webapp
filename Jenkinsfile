@@ -1,8 +1,9 @@
 pipline {
+    agent any
     tools {
         maven 'Maven'
     }
-    agent any
+    
     stages{
         stage('Initialize'){
             steps{
@@ -13,7 +14,9 @@ pipline {
             }
         }
         stage ('Build'){
+            steps{
             sh 'mvn clean package'
+            }
         }
     }
 }
