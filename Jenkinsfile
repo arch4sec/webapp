@@ -23,7 +23,7 @@ pipeline {
         stage('Source dependency cehck'){
             steps{
                 sh 'rm owasp-dependency-check.sh || true'
-                sh 'wget https://raw.githubusercontent.com/arch4sec/webapp/master/owasp-dependency-check.sh'
+                sh 'wget "https://raw.githubusercontent.com/arch4sec/webapp/master/owasp-dependency-check.sh" '
                 sh 'chmod +x owasp-dependency-check.sh'
                 sh 'bash owasp-dependency-check.sh'
             }
