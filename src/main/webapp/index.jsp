@@ -51,8 +51,8 @@
 <!-- Main jumbotron for a primary marketing message or call to action -->
 <div class="jumbotron">
     <div class="container">
-        <h1>Welcome to DevSecOps Demo Project</h1>
-        <p>i will use only opensource tools in my Pipline </p>
+        <h1>Welcome to DevSecOps demo project</h1>
+        <p>i will use only opensource tools in my pipline </p>
         <p><a class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>
     </div>
 </div>
@@ -80,7 +80,7 @@
     <hr>
 
     <footer>
-        <p>&copy; Company 2014</p>
+        <p>&copy; Company 2020</p>
     </footer>
 </div> <!-- /container -->
 
