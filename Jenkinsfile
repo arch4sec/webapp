@@ -21,12 +21,13 @@ pipeline {
             }
         }
         stage('Source dependency check'){
-            steps{
-                sh 'rm owasp-dependency-check.sh || true'
-                sh 'wget "https://raw.githubusercontent.com/arch4sec/webapp/master/owasp-dependency-check.sh" '
-                sh 'chmod +x owasp-dependency-check.sh'
-                sh 'bash owasp-dependency-check.sh'
-            }
+		steps {
+		     sh 'rm owasp-* || true'
+		     sh 'wget https://raw.githubusercontent.com/devopssecure/webapp/master/owasp-dependency-check.sh'	
+		     sh 'chmod +x owasp-dependency-check.sh'
+		     sh 'bash owasp-dependency-check.sh'
+		     sh 'cat /var/lib/jenkins/OWASP-Dependency-Check/reports/dependency-check-report.xml'
+		}
         }
         stage ('Build'){
             steps{
@@ -36,7 +37,7 @@ pipeline {
         stage ('Deploy-toTomcat'){
             steps{
                 sshagent(['tomcat']){
-                    sh 'scp -o StrictHostKeyChecking=no target/*.war ubuntu@52.16.209.58:/home/ubuntu/prod/apache-tomcat-8.5.57/webapps/webapp.war'
+                    sh 'scp -o StrictHostKeyChecking=no target/*.war ubuntu@3.250.146.239:/home/ubuntu/prod/apache-tomcat-8.5.57/webapps/webapp.war'
                 }
                 
             }
