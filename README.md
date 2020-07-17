@@ -1,4 +1,9 @@
-This is a sample Web Application to use during Continuous Integration demos.
+This is a sample Web Application to use during DevSecOps CICD demos.
+#Tools
+- trufflehog
+- OWASP Dependency Check
+- SonarQube
+- OWASP ZAP
 
 #Build Instruction
 
