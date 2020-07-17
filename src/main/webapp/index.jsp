@@ -52,7 +52,7 @@
 <div class="jumbotron">
     <div class="container">
         <h1>Welcome to DevSecOps demo project</h1>
-        <p>i will use only opensource tools in my pipeline </p>
+        <p>i will use only opensource tools in my pipeline- </p>
         <p><a class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>
     </div>
 </div>
